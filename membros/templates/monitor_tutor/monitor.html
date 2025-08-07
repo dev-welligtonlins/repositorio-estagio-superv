@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{%block conteudo%}
+<body>
+    <h1 class="mt-5">{{ monitor.mon_nome }}</h1>
+    <dl>
+
+      <dt>CPF</dt>
+      <dd>{{ monitor.mon_cpf }}</dd>
+
+      <dt>Sexo</dt>
+      <dd>{{ monitor.mon_genero }}</dd>
+
+      <dt>Email Pessoal</dt>
+      <dd>{{ monitor.mon_email_pessoal }}</dd>
+
+      <dt>Email Institucional</dt>
+      <dd>{{ monitor.mon_email_institucional }}</dd>
+
+      <dt>Telefone</dt>
+      <dd>{{ monitor.mon_telefone }}</dd>
+
+      <dt>Endereco</dt>
+      <dd>{{ monitor.mon_endereco }}</dd>
+
+      <dt>Matricula</dt>
+      <dd>{{ monitor.mon_matricula }}</dd>
+
+      <dt>Curso</dt>
+      <dd>{{ monitor.mon_curso }}</dd>
+
+      <dt>Período</dt>
+      <dd>{{ monitor.mon_periodo_academico }}</dd>
+
+    </dl>
+
+{%endblock%}

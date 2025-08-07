@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{%block conteudo%}
+<body>
+    <h1 class="mt-5">{{ tutor.tut_nome }}</h1>
+    <dl>
+
+      <dt>CPF</dt>
+      <dd>{{ tutor.tut_cpf }}</dd>
+
+      <dt>Sexo</dt>
+      <dd>{{ tutor.tut_genero }}</dd>
+
+      <dt>Email Pessoal</dt>
+      <dd>{{ tutor.tut_email_pessoal }}</dd>
+
+      <dt>Email Institucional</dt>
+      <dd>{{ tutor.tut_email_institucional }}</dd>
+
+      <dt>Telefone</dt>
+      <dd>{{ tutor.tut_telefone }}</dd>
+
+      <dt>Endereco</dt>
+      <dd>{{ tutor.tut_endereco }}</dd>
+
+      <dt>Matricula</dt>
+      <dd>{{ tutor.tut_matricula }}</dd>
+
+      <dt>Curso</dt>
+      <dd>{{ tutor.tut_curso }}</dd>
+
+      <dt>Período</dt>
+      <dd>{{ tutor.tut_periodo_academico }}</dd>
+
+    </dl>
+
+{%endblock%}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%block conteudo%}
+<body>
+    <h1 class="mt-5">{{ interprete.int_nome }}</h1>
+    <dl>
+
+      <dt>CPF</dt>
+      <dd>{{  interprete.int_cpf  }}</dd>
+
+      <dt>Sexo</dt>
+      <dd>{{  interprete.int_genero }}</dd>
+
+      <dt>Email</dt>
+      <dd>{{  interprete.int_email }}</dd>
+
+      <dt>Telefone</dt>
+      <dd>{{ interprete.int_telefone }}</dd>
+
+    </dl>
+
+{%endblock%}

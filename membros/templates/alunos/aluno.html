@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{%block conteudo%}
+<body>
+    <h1 class="mt-5">{{ aluno.alu_nome }}</h1>
+    <dl>
+
+      <dt>CPF</dt>
+      <dd>{{  aluno.alu_cpf  }}</dd>
+
+      <dt>Genero</dt>
+      <dd>{{  aluno.alu_genero }}</dd>
+
+      <dt>Email Pessoal</dt>
+      <dd>{{  aluno.alu_email_pessoal }}</dd>
+
+      <dt>Email Institucional</dt>
+      <dd>{{  aluno.alu_email_institucional }}</dd>
+
+      <dt>Telefone</dt>
+      <dd>{{ aluno.alu_telefone }}</dd>
+
+      <dt>Endereco</dt>
+      <dd>{{ aluno.alu_endereco }}</dd>
+
+      <dt>Matricula</dt>
+      <dd>{{ aluno.alu_matricula }}</dd>
+
+      <dt>Deficiencia</dt>
+      <dd>{{ aluno.alu_deficiencias }}</dd>
+
+      <dt>Curso</dt>
+      <dd>{{ aluno.alu_cur }}</dd>
+
+      <dt>Data de Nascimento</dt>
+      <dd>{{ aluno.alu_data_nascimento| date:'d/m/Y'}}</dd>
+    </dl>
+
+{%endblock%}
