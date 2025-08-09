@@ -99,6 +99,9 @@ DATABASES = {
     }
 }
 
+SECRET_KEY = os.getenv('SECRET_KEY', 'chave_para_dev_local')
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
