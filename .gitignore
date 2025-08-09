@@ -1,0 +1,38 @@
+# Arquivo de ambiente (NUNCA subir a SECRET_KEY ou senhas)
+.env
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos temporários de logs
+*.log
+
+# Banco de dados local (SQLite)
+db.sqlite3
+
+# Configuração local
+*.local
+
+
+# Virtual env
+venv/
+ENV/
+env/
+.venv/
+
+# Configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações do IDE/Editor
+.vscode/
+.idea/
+
+# Arquivos de build
+build/
+dist/
+
+# Compilações do Python
+*.egg-info/
