@@ -1,4 +1,5 @@
 asgiref==3.8.1
+psycopg2-binary
 cffi==1.17.1
 crispy-bootstrap5==2025.6
 cryptography==45.0.6
