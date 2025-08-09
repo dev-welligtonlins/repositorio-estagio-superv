@@ -30,9 +30,9 @@ class Acompanhamentos(models.Model):
         db_table = 'acompanhamento'
 
 class AcompanhamentoDisciplinas(models.Model):
-    AsDis_id = models.AutoField(db_column='AsDis_id', primary_key=True)
-    AsDis_disciplina = models.ForeignKey(Disciplinas, on_delete=models.SET_NULL, db_column='AsDis_disciplina', blank=True, null=True)
-    AsDis_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='AsDis_acompanhamento', blank=True, null=True)
+    AsDis_id = models.AutoField(db_column='asdis_id', primary_key=True)
+    AsDis_disciplina = models.ForeignKey(Disciplinas, on_delete=models.SET_NULL, db_column='asdis_disciplina', blank=True, null=True)
+    AsDis_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='asdis_acompanhamento', blank=True, null=True)
 
     def __str__(self):
         return self.AsDis_disciplina.__str__()
@@ -42,11 +42,11 @@ class AcompanhamentoDisciplinas(models.Model):
         db_table = 'acompanhamento_disciplina'
 
 class AcompanhamentoInterpretes(models.Model):
-    AsInt_id = models.AutoField(db_column='AsInt_id', primary_key=True)
-    AsInt_inicio = models.DateField(db_column='AsInt_inicio', default = timezone.now)
-    AsInt_fim = models.DateField(db_column='AsInt_fim', default = timezone.now)
-    AsInt_interprete = models.ForeignKey(Interprete, on_delete=models.SET_NULL, db_column='AsInt_interprete', blank=True, null=True)
-    AsInt_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='AsInt_acompanhamento', blank=True, null=True)
+    AsInt_id = models.AutoField(db_column='asint_id', primary_key=True)
+    AsInt_inicio = models.DateField(db_column='asint_inicio', default = timezone.now)
+    AsInt_fim = models.DateField(db_column='asint_fim', default = timezone.now)
+    AsInt_interprete = models.ForeignKey(Interprete, on_delete=models.SET_NULL, db_column='asint_interprete', blank=True, null=True)
+    AsInt_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='asint_acompanhamento', blank=True, null=True)
 
     def __str__(self):
         return self.AsInt_interprete.__str__()
@@ -56,11 +56,11 @@ class AcompanhamentoInterpretes(models.Model):
         db_table = 'acompanhamento_interprete'
 
 class AcompanhamentoMonitores(models.Model):
-    AsMon_id = models.AutoField(db_column='AsMon_id', primary_key=True)
-    AsMon_inicio = models.DateField(db_column='AsMon_inicio', default = timezone.now)
-    AsMon_fim = models.DateField(db_column='AsMon_fim', default = timezone.now)
-    AsMon_monitor = models.ForeignKey(Monitor, on_delete=models.SET_NULL, db_column='AsMon_monitor', blank=True, null=True)
-    AsMon_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='AsMon_acompanhamento', blank=True, null=True)
+    AsMon_id = models.AutoField(db_column='asmon_id', primary_key=True)
+    AsMon_inicio = models.DateField(db_column='asmon_inicio', default = timezone.now)
+    AsMon_fim = models.DateField(db_column='asmon_fim', default = timezone.now)
+    AsMon_monitor = models.ForeignKey(Monitor, on_delete=models.SET_NULL, db_column='asmon_monitor', blank=True, null=True)
+    AsMon_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='asmon_acompanhamento', blank=True, null=True)
 
     def __str__(self):
         return self.AsMon_monitor.__str__()
@@ -70,11 +70,11 @@ class AcompanhamentoMonitores(models.Model):
         db_table = 'acompanhamento_monitoria'
 
 class AcompanhamentoTutores(models.Model):
-    AsTut_id = models.AutoField(db_column='AsTut_id', primary_key=True)
-    AsTut_inicio = models.DateField(db_column='AsTut_inicio', default = timezone.now)
-    AsTut_fim = models.DateField(db_column='AsTut_fim', default = timezone.now)
-    AsTut_tutor = models.ForeignKey(Tutor, on_delete=models.SET_NULL, db_column='AsTut_tutor', blank=True, null=True)
-    AsTut_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='AsTut_acompanhamento', blank=True, null=True)
+    AsTut_id = models.AutoField(db_column='astut_id', primary_key=True)
+    AsTut_inicio = models.DateField(db_column='astut_inicio', default = timezone.now)
+    AsTut_fim = models.DateField(db_column='astut_fim', default = timezone.now)
+    AsTut_tutor = models.ForeignKey(Tutor, on_delete=models.SET_NULL, db_column='astut_tutor', blank=True, null=True)
+    AsTut_acompanhamento = models.ForeignKey(Acompanhamentos, on_delete=models.SET_NULL, db_column='astut_acompanhamento', blank=True, null=True)
 
     def __str__(self):
         return self.AsTut_tutor.__str__()
