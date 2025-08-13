@@ -1,6 +1,16 @@
 -- Criar banco de dados (PostgreSQL 9.5+ suporta IF NOT EXISTS)
-DROP DATABASE estagio;
-CREATE DATABASE estagio;
+SET client_encoding = 'UTF8';
+
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE datname = 'estagio_lbs6' AND pid <> pg_backend_pid();
+
+DROP DATABASE estagio_lbs6;
+
+CREATE DATABASE estagio_lbs6 WITH 
+    OWNER = root
+    ENCODING = 'UTF8'
+    TEMPLATE template0;
 
 -- TABELA: CURSOS
 CREATE TABLE IF NOT EXISTS cursos (
@@ -145,7 +155,7 @@ CREATE TABLE IF NOT EXISTS acompanhamento_interprete (
 -- TABELA: ACOMPANHAMENTO_MONITORIA
 CREATE TABLE IF NOT EXISTS acompanhamento_monitoria (
     asmon_id SERIAL PRIMARY KEY,
-    asmon_inicio DATE NOT NULLs
+    asmon_inicio DATE NOT NULL,
     asmon_fim DATE,
     asmon_monitor INT REFERENCES monitor(mon_id),
     asmon_acompanhamento INT REFERENCES acompanhamento(aco_id)

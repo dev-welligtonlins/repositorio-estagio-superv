@@ -1,3 +1,5 @@
+SET client_encoding = 'UTF8';
+
 
 -- 1. CURSOS (base para várias FK)
 INSERT INTO cursos (cur_id, cur_nome, cur_quant_periodos, cur_turno)
